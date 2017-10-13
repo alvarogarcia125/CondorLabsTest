@@ -1,0 +1,19 @@
+{
+  "name": "CondorLabsTest",
+  "version": "1.0.0",
+  "description": "CondorLabsTest",
+  "main": "server.js",
+  "dependencies": {
+    "co": "^4.6.0",
+    "hapi": "16.4.3",
+    "require-dir": "^0.3.2",
+    "mongojs": "^2.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alvaro Garcia",
+  "license": "ISC"
+}
