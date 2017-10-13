@@ -22,7 +22,7 @@ module.exports = [
     },
     {
         method: 'POST',
-        path: '/providers/create',
+        path: '/providers',
         handler: api_providers.create,
         config: {
             tags: ['api'],
@@ -31,7 +31,7 @@ module.exports = [
     },
     {
         method: 'PATCH',
-        path: '/providers/update/{id}',
+        path: '/providers/{id}',
         handler: api_providers.update,
         config: {
             tags: ['api'],
@@ -40,7 +40,7 @@ module.exports = [
     },
     {
         method: 'DELETE',
-        path: '/providers/delete/{id}',
+        path: '/providers/{id}',
         handler: api_providers.delete,
         config: {
             tags: ['api'],
