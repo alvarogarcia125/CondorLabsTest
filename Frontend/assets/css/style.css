@@ -1,0 +1,301 @@
+html,
+body {
+    font-size: 15px;
+    color: #565656;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+a,
+button,
+a span {
+    -webkit-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:focus,
+.btn:active {
+    outline: inherit;
+}
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*    direction: rtl;*/
+}
+p {
+    margin: 0 0 15px;
+}
+.clear {
+    clear: both;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.btn-primary.raised {
+    box-shadow: 0 3px 0 0 #007299;
+    margin-top: 5px;
+}
+
+h1,
+h2,
+h3 {
+
+    font-weight: 300;
+    margin: 0;
+}
+h4,
+h5 {
+    font-weight: 300;
+    margin: 0;
+    line-height: 2rem;
+}
+h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 300;
+}
+h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: .9rem;
+}
+
+/*
+Sections
+*/
+section {
+    background-color: #ecf1f4;
+}
+
+section .featured-course-img{
+    padding:0;
+}
+
+section .featured-course-name{
+    font-weight: 600;
+    color: #555959; 
+}    
+
+section .featured-course-container, section .course-container{
+    padding: 10px;
+}   
+
+section.featured_courses .row{
+    background-color: #ffffff; 
+    margin-bottom: 20px; 
+    margin-left: 0px;
+}
+
+section .info, section .course-title {
+    padding: 12px 15px; 
+}
+
+section .course-title {
+    height: 80px;
+}
+
+section .course-title span{
+    font-weight: 600; 
+    color: #555959;
+}
+
+section .course-provider{
+    color: #9da9a8;
+}
+
+section .course-hours{
+    padding-top:15px;
+}
+
+section .label{
+    font-size: 14px;
+}
+
+section .label-success{
+    background: #3aba91;
+}
+
+section .courses .row{
+    margin-bottom: 20px;
+}
+
+section .course-box{
+    background: #ffffff;
+    width: 100%;
+    min-height: 215px;
+}
+
+.input-group button a i{
+    color:#fff;
+}
+
+h1 span {
+    color: #f56363;
+    font-weight: 400;
+}
+
+.btn-success{
+    background-color: #3aba91 !important;
+    border-color: #3aba91 !important;
+}
+
+/* Header */
+.header{
+    background:#555555;
+    padding:11px 0;
+}
+.header-wrapper .header-content{
+    float:right;
+    font-size:13px;
+}
+.header-wrapper .header-content a{
+    color:#fff;
+    margin-right:20px;
+    font-weight: 600;
+}
+
+.header-wrapper .header-content a i{
+    padding-right:5px;
+}
+.header-wrapper .header-content .marker{
+   color: #9d9d9d;
+}
+
+/*For Menu Style*/
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius:0;
+    padding-top:6px;
+    margin-bottom: 5px !important;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+    color: #82ca9c;
+    background-color:transparent;
+}
+.navbar-default .navbar-nav>li>a {
+    font-size:14px;
+    font-weight:600;
+}
+.navbar-default .navbar-nav li a :hover{
+    color: #3aba91;
+}
+.login {
+    color: #3aba91 !important;
+}
+.navbar-default .collapse .login:hover a{
+    background-color: rgba(0, 173, 62, 0.75);
+    color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #3aba91;
+    background-color: transparent;
+}
+.navbar-brand{
+    margin-top:-5px;    
+}
+
+/*Search Section*/
+.search{
+    background:url(../images/homebg.jpg) no-repeat center center;
+    color:#000;
+    background-size:cover;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    -ms-background-size:cover;
+}
+.search-wrapper{
+    padding:40px 0px 70px 0px;
+    overflow:hidden;
+}
+.search-content h2{
+    margin-bottom: 30px;
+    color: #fff;
+}
+.search-content input{
+   font-size: 14px !important;
+}
+.search-content span{
+    color: #fff;
+}
+.search-content .row{
+    margin-bottom: 20px;
+}
+
+/* Featured Courses Section */
+.list-title{
+    color: #999;
+    margin: 30px 0px;
+}
+
+.list-title b{
+    color: #3aba91;
+}
+
+/*scollup icon*/
+.scrollup {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    opacity: .3;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #000;
+    z-index: 10;
+    transition: opacity .5s, background-color .5s;
+    -moz-transition: opacity .5s, background-color .5s;
+    -webkit-transition: opacity .5s, background-color .5s;
+}
+.scrollup:hover {
+    background: #82ca9c;
+    opacity: 1;
+}
+.scrollup i {
+    font-size: 13px;
+    position: absolute;
+    opacity: 1;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -6px;
+    text-decoration: none;
+
+}
+
+
