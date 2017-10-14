@@ -1,6 +1,6 @@
 (function() {
 
-  var courses_app = angular.module('courses_module', []);
+  var courses_app = angular.module('courses_module', ['ngAnimate', 'ui.bootstrap']);
   courses_app.controller('featured_courses_controller', function($scope, $http) 
   {
     $http.get(config.featuredCoursesUri)
@@ -15,7 +15,7 @@
     $http.get(config.allCoursesUri)
     .then(function (result) 
     {
-      $scope.all_courses = result.data.items;
+      $scope.all_courses = result.data;
     });
   });
 

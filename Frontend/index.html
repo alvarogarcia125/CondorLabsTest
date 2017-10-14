@@ -13,8 +13,12 @@
         <link rel="stylesheet" href="assets/css/responsive.css" />
         <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-animate.js"></script>
+          <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.3.js"></script>
+          <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
     </head>
-    <body ng-app="courses_module" >
+    <body ng-app="courses_module" ng-controller="all_courses_controller">
         <header class="header">
             <div class="container">
                 <div class="row">
@@ -74,7 +78,7 @@
                                     <div class="row">
                                         <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
                                             <div class="input-group input-group-lg">
-                                                <input type="text" class="form-control" placeholder="Search courses and providers...">
+                                                <input type="text" class="form-control" placeholder="Search courses and providers..." ng-model="searchText" typeahead="course.course.name for course in all_courses.items | filter:$viewValue | limitTo:3"">
                                                 <span class="input-group-btn">
                                                     <button type="button" class="btn btn-success btn-flat"><i class="fa fa-search "></i></button>
                                                 </span>
@@ -93,7 +97,7 @@
         <section class="featured_courses" ng-controller="featured_courses_controller">
             <div class="container">
                 <h3 class="list-title">Featured Courses</h3>
-                <div ng-repeat="featured_course in featured_courses" class="row">
+                <div ng-repeat="featured_course in featured_courses " class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12 featured-course-img" >
                         <img src="https://storage.cebroker.com/CEBroker/{{featured_course.coursePublication.course.featuredBanner}}" >
                     </div>
@@ -118,11 +122,11 @@
             </div>
         </section>
         
-        <section class="courses" ng-controller="all_courses_controller">
+        <section class="courses" >
             <div class="container">
-            <h3 class="list-title" ><b>{{all_courses.length}}</b> Results</h3>
+            <h3 class="list-title" ><b>{{all_courses.totalItems}}</b> Results</h3>
                 <div class="row">
-                    <div ng-repeat="course in all_courses" class="col-md-4 col-sm-6 col-xs-12 course-container">
+                    <div ng-repeat="course in all_courses.items | filter:searchText" class="col-md-4 col-sm-6 col-xs-12 course-container">
                         <div class="course-box">
                             <div class="col-xs-12 course-title">
                                 <span>{{course.course.name}}</span>

@@ -230,6 +230,7 @@ h1 span {
 .search{
     background:url(../images/homebg.jpg) no-repeat center center;
     color:#000;
+    box-shadow: inset 0 0 1000px 1000px rgba(0,0,0,.6);
     background-size:cover;
     -webkit-background-size:cover;
     -moz-background-size:cover;
