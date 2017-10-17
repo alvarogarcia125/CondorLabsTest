@@ -80,7 +80,7 @@
                                             <div class="input-group input-group-lg">
                                                 <input type="text" class="form-control" placeholder="Search courses and providers..." ng-model="searchText" typeahead="course.course.name for course in all_courses.items | filter:$viewValue | limitTo:3"">
                                                 <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-success btn-flat"><i class="fa fa-search "></i></button>
+                                                    <button ng-click="searchCourseByName(searchText)" type="button" class="btn btn-success btn-flat"><i class="fa fa-search "></i></button>
                                                 </span>
                                             </div>
                                         </div>
@@ -124,15 +124,15 @@
         
         <section class="courses" >
             <div class="container">
-            <h3 class="list-title" ><b>{{all_courses.totalItems}}</b> Results</h3>
+            <h3 class="list-title" ><b>{{searched_courses.totalItems}}</b> Results</h3>
                 <div class="row">
-                    <div ng-repeat="course in all_courses.items | filter:searchText" class="col-md-4 col-sm-6 col-xs-12 course-container">
+                    <div ng-repeat="course in searched_courses.items" class="col-md-4 col-sm-6 col-xs-12 course-container">
                         <div class="course-box">
                             <div class="col-xs-12 course-title">
                                 <span>{{course.course.name}}</span>
                             </div>
                             <div class="col-xs-12 course-provider">
-                                <span>{{course.course.provider.name}}</span>
+                                <span title="{{course.course.provider.name}}">{{course.course.provider.name}}</span>
                             </div>
                             <div class="col-xs-12 course-hours">
                                 <span>{{course.totalHours}} Hrs • {{course.course.deliveryMethod.description}} </span>

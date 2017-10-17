@@ -9,14 +9,22 @@
       $scope.featured_courses = result.data;
     });
   });
-
+  
   courses_app.controller('all_courses_controller', function($scope, $http) 
   {
     $http.get(config.allCoursesUri)
     .then(function (result) 
     {
       $scope.all_courses = result.data;
+      $scope.searched_courses = result.data;
     });
+
+    $scope.searchCourseByName = function(searchText){
+      $http.get(config.allCoursesUri + '&courseName=' + searchText)
+      .then(function(result){
+          $scope.searched_courses = result.data;
+      });
+    };
   });
 
 })();

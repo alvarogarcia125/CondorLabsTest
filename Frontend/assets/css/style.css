@@ -131,6 +131,9 @@ section .course-title span{
 
 section .course-provider{
     color: #9da9a8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 section .course-hours{
